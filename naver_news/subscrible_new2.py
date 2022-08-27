@@ -6,8 +6,10 @@ from naver_news.config import client_id,client_secret
 import requests
 import telegram
 from telegram_bot.config import api_key
+from database.config import MONGO_URL
 
-client = MongoClient('localhost', 27017)
+client = MongoClient(MONGO_URL)
+db = client['Ipo2']
 db2 = client['Ipo2_client']
 
 bot = telegram.Bot(token = api_key)
@@ -101,4 +103,4 @@ def find_news2():
             print("안보냄")
             
             
-find_news2()
+# find_news2()

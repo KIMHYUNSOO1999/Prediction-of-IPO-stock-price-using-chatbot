@@ -14,14 +14,14 @@ from math import pi
 from matplotlib.path import Path
 from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
+from database.config import MONGO_URL
 
-
+client = MongoClient(MONGO_URL)
+db = client['Ipo2']
+db2 = client['Ipo2_client']
 
 def get_graph(cor_name,cor_shape):
     
-    client = MongoClient('localhost', 27017)
-    db = client['Ipo2']
-
     
     plt.style.use('ggplot')
     plt.rc('font', family='NanumGothic')
@@ -77,9 +77,6 @@ def get_graph(cor_name,cor_shape):
 
 def get2_graph(cor_name):
     
-        
-    client = MongoClient('localhost', 27017)
-    db = client['Ipo2']
     
     df2 = pd.DataFrame(db.inform.find({},{'_id':False}))
     

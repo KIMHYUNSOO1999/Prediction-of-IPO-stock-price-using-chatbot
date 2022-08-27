@@ -22,10 +22,13 @@ from Crawling.preproessing_second import processing_second
 # from preproessing_second import processing_second
 
 
+from database.config import MONGO_URL
 
-client = MongoClient('localhost', 27017)
+client = MongoClient(MONGO_URL)
 db = client['Ipo2']
 db2 = client['Ipo2_client']
+
+
 
 
 with open('regression/saved_model.pickle','rb') as f:

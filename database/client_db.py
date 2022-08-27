@@ -4,7 +4,10 @@ import telegram
 from telegram_bot.config import api_key
 
 bot = telegram.Bot(token = api_key)
-client = MongoClient('localhost', 27017)
+from database.config import MONGO_URL
+
+client = MongoClient(MONGO_URL)
+db = client['Ipo2']
 db2 = client['Ipo2_client']
  
 # DB 생성하기    
