@@ -11,7 +11,7 @@
 
 ## 시스템 구성도
 
-● Server : AWS Lamda</p>
+● Server : AWS EC2</p>
 ● Database : MongoDB</p>
 ● Programming language  : Python</p>
 
