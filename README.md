@@ -1,10 +1,13 @@
-# 챗봇을 활용한 공모주 예측 서비스        (IPO-Stock-Price-Prediction-Service-Using-Chatbot)
+# 챗봇을 활용한 공모주 예측 서비스</p> (IPO-Stock-Price-Prediction-Service-Using-Chatbot)
 
 
 
-## 프로젝트
+## 프로젝트 명
 2022 동국대학교 데이터 청년 캠퍼스 , 공모주 시초가 예측 모델 챗봇 서비스</p>
 구현 결과물 : https://t.me/DongGuk_20220727_Exam_bot
+
+## 프로젝트 기간
+1 개월 (2022.07.27~2022.08.27)
 
 ## 개발목표
 2020년 12월 이후, 공모주 배정안이 개정되면서, 공모주 투자의 진입장벽이 낮아짐</p>
