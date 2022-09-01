@@ -10,7 +10,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 
 #아이디,비밀번호
 from telegram_bot.config import api_key
-
+from database.config import MONGO_URL
 
 # 주기적으로 DB 최신화
 from Crawling.Crawling_main import Crawling_total
@@ -27,7 +27,9 @@ from database.client_db import search_id,insert_sub,delete_sub,list_sub,toggle_s
 bot = telegram.Bot(token = api_key)
 BASE_PATH  = os.getcwd()
 
-client = MongoClient('localhost', 27017)
+
+
+client = MongoClient(MONGO_URL)
 db = client['Ipo2']
 db2 = client['Ipo2_client']
 
@@ -273,7 +275,7 @@ def alarm():
         
 sched = BlockingScheduler(timezone='Asia/Seoul')
 sched.add_job(find_news2, 'interval', minutes=1, id='my_job_id1')
-sched.add_job(Crawling_main, 'interval', minutes=30, id='my_job_id2')
+sched.add_job(Crawling_main, 'cron',hour=8,minute=0, second=0, id='my_job_id2')
 sched.add_job(alarm, 'cron',hour=8,minute=0, second=0, id='my_job_id3')
 
 sched.start()
