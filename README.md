@@ -19,11 +19,15 @@
 
 ● Server : AWS EC2</p>
 ● Database : MongoDB</p>
-● Programming language  : Python</p>
+● Programming language  : Python</p></p>
 
-## 사용 데이터
-![캡처](https://user-images.githubusercontent.com/93048764/187399947-ace0cef5-f8c9-442b-89aa-bcc2cfcd3b6f.JPG)
+## 주요 서비스
+![주요 서비스](https://user-images.githubusercontent.com/93048764/187808478-0cf1a249-e5ba-44f4-a586-5d9b733bffb9.jpg)
 
 
 ## 시연 영상
 ![시연영상-min](https://user-images.githubusercontent.com/93048764/187015008-a032d11b-4116-46db-8ebe-a0b4090f87e9.gif)
+
+
+## 사용 데이터
+![캡처](https://user-images.githubusercontent.com/93048764/187399947-ace0cef5-f8c9-442b-89aa-bcc2cfcd3b6f.JPG)
