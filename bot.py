@@ -262,10 +262,10 @@ def alarm():
 
     df = pd.DataFrame(db2.inform.find({},{'_id':False}))
 
-    for i in range(len(df)):
+    for i in range(0,1):
         send_id.append(int(df['number_id'][i]))
      
-
+     
     print("진행중")
     for row in send_id:
         if result_Text=='':
@@ -275,8 +275,8 @@ def alarm():
         
 sched = BlockingScheduler(timezone='Asia/Seoul')
 sched.add_job(find_news2, 'interval', minutes=1, id='my_job_id1')
-sched.add_job(Crawling_main, 'cron',hour=8,minute=0, second=0, id='my_job_id2')
-sched.add_job(alarm, 'cron',hour=8,minute=0, second=0, id='my_job_id3')
+sched.add_job(Crawling_main,'cron',hour=8,minute=0, second=0, id='my_job_id2')
+sched.add_job(alarm,'cron',hour=8,minute=0, second=0, id='my_job_id3')
 
 sched.start()
  

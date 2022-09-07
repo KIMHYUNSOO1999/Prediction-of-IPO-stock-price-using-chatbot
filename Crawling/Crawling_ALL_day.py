@@ -109,8 +109,8 @@ def Crawling_day_alarm():
         list0_1.append(list0[i].split('~')[0])
 
     for i in range(len(list1)):
-        list1_2.append(list0[i].split('~')[1])
-        list1_1.append(list0[i].split('~')[0])
+        list1_2.append(list1[i].split('~')[1])
+        list1_1.append(list1[i].split('~')[0])
 
     df['수요예측일(1)']=list0_1
     df['수요예측일(2)']=list0_2
@@ -149,6 +149,7 @@ def push_day_alarm(df):
 
     target_time=f"{target_year}년도 {target_month}월 {target_day}일"
     
+    print(target_time)
     list_target=['수요예측일(첫째날)','수요예측일(둘째날)','공모청약일(첫째날)','공모청약일(둘째날)','배정공고일','납입일','환불일','상장일']
 
     count_number=[]
@@ -183,7 +184,7 @@ def push_day_alarm(df):
 
     result_Text = "\n".join(Text)
         
-    # print(result_Text)
+    print(result_Text)
     
     if result_Text=='':
         print(f"<오늘의 공모주 일정정보>\n\n일정: {target_time}\n\n일정이 없습니다!\n")
@@ -194,7 +195,8 @@ def push_day_alarm(df):
     return result_Text,target_time
     
     
-# push_day_alarm()
+# df=Crawling_day_alarm()
+# push_day_alarm(df)
 
 
        

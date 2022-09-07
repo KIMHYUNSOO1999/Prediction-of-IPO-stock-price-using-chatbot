@@ -4,7 +4,6 @@ import pickle
 from pathlib import Path
 from pymongo import MongoClient
 
-
 from Crawling.Crawling_38_basic_info import crawling_38_basic_info
 from Crawling.Crawling_38_day import crawling_38_day
 from Crawling.Crawling_data import crawling_data
@@ -12,6 +11,7 @@ from Crawling.preprocessing import preprocessing
 from Crawling.Crawling_per import get_per
 from Crawling.Crawling_search_amt import main_search_amt
 from Crawling.preproessing_second import processing_second
+from Crawling.config import MONGO_URL
 
 # from Crawling_38_basic_info import crawling_38_basic_info
 # from Crawling_38_day import crawling_38_day
@@ -20,9 +20,7 @@ from Crawling.preproessing_second import processing_second
 # from Crawling_per import get_per
 # from Crawling_search_amt import main_search_amt
 # from preproessing_second import processing_second
-
-
-from database.config import MONGO_URL
+# from config import MONGO_URL
 
 client = MongoClient(MONGO_URL)
 db = client['Ipo2']
@@ -113,3 +111,4 @@ def Crawling_total():
     
    
   
+# Crawling_total()
